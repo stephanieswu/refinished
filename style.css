@@ -1,8 +1,37 @@
 *{
-  background-color: #717D7E;
+  background: linear-gradient(270deg, #373142, #3d557a, #54638d,#3f4d77);
+background-size: 600% 600%;
+
+animation: AnimationName 20s ease infinite;
 }
 
-.st0{
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.st1{
+  height: 100px;
+  animation-name: moon;
+  animation-iteration-count: infinite;
+  animation-duration: 20s;
+}
+
+@keyframes moon {
+  0%{transform: translateX(-900px); fill:#EAF2F8  }
+  25%{transform: translateY(-800px);fill:#2980B9}
+  50%{ transform: translateX(900px);fill:#A9CCE3}
+  75%{transform: translateY(900px);ill:#D4E6F1}
+  100%{transform: translateX(-900px);fill:#EAF2F8  }
+}
+
+
+
+
+
+
+/*.st0{
   animation-name: egg;
   animation-duration: 3s;
   animation-iteration-count: infinite;
