@@ -19,7 +19,7 @@ animation: AnimationName 20s ease infinite;
 }
 
 @keyframes moon {
-  0%{transform: translateX(-900px); fill:#EAF2F8  }
+  10%{transform: translateX(-900px); fill:#EAF2F8  }
   25%{transform: translateY(-800px);fill:#2980B9}
   50%{ transform: translateX(900px);fill:#A9CCE3}
   75%{transform: translateY(900px);ill:#D4E6F1}
