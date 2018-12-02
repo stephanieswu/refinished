@@ -1,5 +1,6 @@
 *{
-  background: linear-gradient(270deg, #373142, #3d557a, #54638d,#3f4d77);
+  /*background: linear-gradient(270deg, #373142, #3d557a, #54638d,#3f4d77);*/
+  background-color: black;
 background-size: 600% 600%;
 
 animation: AnimationName 30s ease infinite;
@@ -11,16 +12,75 @@ animation: AnimationName 30s ease infinite;
     100%{background-position:0% 50%}
 }
 
+.demo-dot {
+  -webkit-animation: xAxis 10s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
+  animation: xAxis 10s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
+  margin:50px;
+  margin-left: 0;
+  fill:yellow;
+}
+
+.demo-dot::after {
+  content: '';
+  display: inline-flex;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: #D3D3D3;
+  float: left;
+  -webkit-animation: yAxis 10s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
+  animation: yAxis 10s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
+}
+
+
+
+
+@-webkit-keyframes yAxis {
+  50% {
+    -webkit-animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+    animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+    -webkit-transform: translateY(-300px);
+    transform: translateY(-300px);
+  }
+}
+
+@keyframes yAxis {
+  50% {
+    -webkit-animation-timing-function: cubic-bezier(0.5, 0.34, 0.5, 1);
+    animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+    -webkit-transform: translateY(-300px);
+    transform: translateY(-300px);
+  }
+}
+
+@-webkit-keyframes xAxis {
+  50% {
+    -webkit-animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+    animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+    -webkit-transform: translateX(-900px);
+    transform: translateX(-900px);
+  }
+}
+
+@keyframes xAxis {
+  50% {
+    -webkit-animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+    animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+    -webkit-transform: translateX(900px);
+    transform: translateX(900px);
+  }
+}
+
+
 .st1{
-  width: 150%;
-  animation-name: moon;
-  animation-iteration-count: infinite;
-  animation-duration: 30s;
+  width: 80%;
+  animation:moon 20s linear infinite;
+  border: 3px solid blue;
 }
 
 @keyframes moon {
   0%{transform: translate(-900px ,500px); fill:#EAF2F8;  }
-  30%{transform: translateY(-650px)scale(1.3, 1.3);;fill:#2980B9;transform:  }
+  30%{transform: translateY(-500px)scale(1.3, 1.3);;fill:#2980B9;transform:  }
   60%{ transform: translate(900px,500px);fill:#A9CCE3;}
   85%{transform: translateY(1000px,);ill:#D4E6F1}
   100%{transform: translate(-900px ,500px);fill:#EAF2F8  }
