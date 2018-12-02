@@ -15,13 +15,13 @@ animation: AnimationName 20s ease infinite;
   width: 150%;
   animation-name: moon;
   animation-iteration-count: infinite;
-  animation-duration: 25s;
+  animation-duration: 20s;
 }
 
 @keyframes moon {
-  0%{transform: translate(-900px ,500px); fill:#EAF2F8  }
-  30%{transform: translateY(-800px);fill:#2980B9}
-  60%{ transform: translate(800px,500px);fill:#A9CCE3}
+  0%{transform: translate(-900px ,500px); fill:#EAF2F8;  }
+  30%{transform: translateY(-650px)scale(1.3, 1.3);;fill:#2980B9;transform:  }
+  60%{ transform: translate(800px,500px);fill:#A9CCE3;}
   85%{transform: translateY(1000px,);ill:#D4E6F1}
   100%{transform: translate(-900px ,500px);fill:#EAF2F8  }
 }
