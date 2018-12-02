@@ -1,0 +1,30 @@
+*{
+  background-color: #717D7E;
+}
+
+.st0{
+  animation-name: egg;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  background-color: #FEF9E7;
+}
+
+ @keyframes egg {
+  30% { transform: translateY(-50px);
+        fill:#F1C40F
+  }
+}
+
+.st1{
+  animation-name: yolk;
+  animation-duration: 5s;
+  animation-iteration-count:infinite;
+}
+
+@keyframes yolk {
+  from{fill: #FFF4E0}
+  to {fill: #F1C40F;}
+  25%{
+     transform: translateY(-50px)
+  }
+}
